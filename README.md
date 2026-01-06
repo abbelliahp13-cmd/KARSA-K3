@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuesioner Risiko Kerja</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .question { margin-bottom: 15px; }
+        .options { margin-left: 20px; }
+        button { padding: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        #result { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Kuesioner Risiko Kerja</h1>
+    <p>Petunjuk: Pilih jawaban yang paling sesuai dengan kondisi kerja Anda dalam 1 bulan terakhir.</p>
+    
+    <form id="questionnaire">
+        <h2>A. BEBAN KERJA (4 item)</h2>
+        <div class="question">
+            <p>1. Saya bekerja lebih dari 8 jam per hari secara rutin*</p>
+            <div class="options">
+                <input type="radio" name="q1" value="0"> 0 - Tidak pernah (0 poin)<br>
+                <input type="radio" name="q1" value="1"> 1 - Jarang (1 poin)<br>
+                <input type="radio" name="q1" value="2"> 2 - Sering (2 poin)<br>
+                <input type="radio" name="q1" value="3"> 3 - Selalu (3 poin)
+            </div>
+        </div>
+        <div class="question">
+            <p>2. Saya bekerja dengan sistem shift malam/jam tidak teratur*</p>
+            <div class="options">
+                <input type="radio" name="q2" value="0"> 0 - Tidak pernah (0 poin)<br>
+                <input type="radio" name="q2" value="1"> 1 - Jarang (1 poin)<br>
+                <input type="radio" name="q2" value="2"> 2 - Sering (2 poin)<br>
+                <input type="radio" name="q2" value="3"> 3 - Selalu (3 poin)
+            </div>
+        </div>
+        <div class="question">
+            <p>3. Saya sering lembur tidak terencana di luar jam kerja normal*</p>
+            <div class="options">
+                <input type="radio" name="q3" value="0"> 0 - Tidak pernah (0 poin)<br>
+                <input type="radio" name="q3" value="1"> 1 - Jarang (1 poin)<br>
+                <input type="radio" name="q3" value="2"> 2 - Sering (2 poin)<br>
+                <input type="radio" name="q3" value="3"> 3 - Selalu (3 poin)
+            </div>
+        </div>
+        <div class="question">
+            <p>4. Beban kerja saya terasa berlebihan (fisik/mental)*</p>
+            <div class="options">
+                <input type="radio" name="q4" value="0"> 0 - Tidak pernah (0 poin)<br>
+                <input type="radio" name="q4" value="1"> 1 - Jarang (1 poin)<br>
+                <input type="radio" name="q4" value="2"> 2 - Sering (2 poin)<br>
+                <input type="radio" name="q4" value="3"> 3 - Selalu (3 poin)
+            </div>
+        </div>
+
+        <h2>B. BAHAYA FISIK/BIOLOGI/KIMIA (3 item)</h2>
+        <div class="question">
+            <p>5. Saya berisiko terpapar cairan tubuh pasien (darah,sputum)*</p>
+            <div class="options">
+                <input type="radio" name="q5" value="0"> 0 - Tidak pernah (0 poin)<br>
+                <input type="radio" name="q5" value="1"> 1 - Jarang (1 poin)<br>
+                <input type="radio" name="q5" value="2"> 2 - Sering (2 poin)<br>
+                <input type="radio" name="q5" value="3"> 3 - Selalu (3 poin)
+            </div>
+        </div>
+        <div class="question">
+            <p>6. Saya mengalami/berisiko cedera jarum tajam/alat medis*</p>
+            <div class="options">
+                <input type="radio" name="q6" value="0"> 0 - Tidak pernah (0 poin)<br>
+                <input type="radio" name="q6" value="1"> 1 - Jarang (1 poin)<br>
+                <input type="radio" name="q6" value="2"> 2 - Sering (2 poin)<br>
+                <input type="radio" name="q6" value="3"> 3 - Selalu (3 poin)
+            </div>
+        </div>
+        <div class="question">
+            <p>7. Ventilasi udara/ruang kerja kurang baik (pengap,berdebu)*</p>
+            <div class="options">
+                <input type="radio" name="q7" value="0"> 0 - Tidak pernah (0 poin)<br>
+                <input type="radio" name="q7" value="1"> 1 - Jarang (1 poin)<br>
+                <input type="radio" name="q7" value="2"> 2 - Sering (2 poin)<br>
+                <input type="radio" name="q7" value="3"> 3 - Selalu (3 poin)
+            </div>
+        </div>
+
+        <h2>C. ERGONOMI (2 item)</h2>
+        <div class="question">
+            <p>8. Saya bekerja posisi tidak ergonomis (berdiri lama,bungkuk)*</p>
+            <div class="options">
+                <input type="radio" name="q8" value="0"> 0 - Tidak pernah (0 poin)<br>
+                <input type="radio" name="q8" value="1"> 1 - Jarang (1 poin)<br>
+                <input type="radio" name="q8" value="2"> 2 - Sering (2 poin)<br>
+                <input type="radio" name="q8" value="3"> 3 - Selalu (3 poin)
+            </div>
+        </div>
+        <div class="question">
+            <p>9. Saya mengangkat/menggerakkan pasien/beban berat*</p>
+            <div class="options">
+                <input type="radio" name="q9" value="0"> 0 - Tidak pernah (0 poin)<br>
+                <input type="radio" name="q9" value="1"> 1 - Jarang (1 poin)<br>
+                <input type="radio" name="q9" value="2"> 2 - Sering (2 poin)<br>
+                <input type="radio" name="q9" value="3"> 3 - Selalu (3 poin)
+            </div>
+        </div>
+
+        <h2>D. APD & KESELAMATAN (3 item)</h2>
+        <div class="question">
+            <p>10. APD (masker,sarung tangan) TIDAK selalu tersedia*</p>
+            <div class="options">
+                <input type="radio" name="q10" value="0"> 0 - Selalu tersedia (0 poin)<br>
+                <input type="radio" name="q10" value="1"> 1 - Kadang tersedia (1 poin)<br>
+                <input type="radio" name="q10" value="2"> 2 - Jarang tersedia (2 poin)<br>
+                <input type="radio" name="q10" value="3"> 3 - Tidak pernah tersedia (3 poin)
+            </div>
+        </div>
+        <div class="question">
+            <p>11. Penggunaan APD mengganggu kenyamanan/efisiensi kerja*</p>
+            <div class="options">
+                <input type="radio" name="q11" value="0"> 0 - Tidak pernah (0 poin)<br>
+                <input type="radio" name="q11" value="1"> 1 - Jarang (1 poin)<br>
+                <input type="radio" name="q11" value="2"> 2 - Sering (2 poin)<br>
+                <input type="radio" name="q11" value="3"> 3 - Selalu (3 poin)
+            </div>
+        </div>
+        <div class="question">
+            <p>12. Institusi kurang perhatikan keselamatan kerja saya*</p>
+            <div class="options">
+                <input type="radio" name="q12" value="0"> 0 - Selalu diperhatikan (0 poin)<br>
+                <input type="radio" name="q12" value="1"> 1 - Kadang diperhatikan (1 poin)<br>
+                <input type="radio" name="q12" value="2"> 2 - Jarang diperhatikan (2 poin)<br>
+                <input type="radio" name="q12" value="3"> 3 - Tidak pernah diperhatikan (3 poin)
+            </div>
+        </div>
+
+        <h2>E. PSIKOSOSIAL & PELATIHAN (4 item)</h2>
+        <div class="question">
+            <p>13. Saya merasa sangat lelah setelah bekerja*</p>
+            <div class="options">
+                <input type="radio" name="q13" value="0"> 0 - Tidak pernah (0 poin)<br>
+                <input type="radio" name="q13" value="1"> 1 - Jarang (1 poin)<br>
+                <input type="radio" name="q13" value="2"> 2 - Sering (2 poin)<br>
+                <input type="radio" name="q13" value="3"> 3 - Selalu (3 poin)
+            </div>
+        </div>
+        <div class="question">
+            <p>14. Saya merasa stres karena tekanan pekerjaan*</p>
+            <div class="options">
+                <input type="radio" name="q14" value="0"> 0 - Tidak pernah (0 poin)<br>
+                <input type="radio" name="q14" value="1"> 1 - Jarang (1 poin)<br>
+                <input type="radio" name="q14" value="2"> 2 - Sering (2 poin)<br>
+                <input type="radio" name="q14" value="3"> 3 - Selalu (3 poin)
+            </div>
+        </div>
+        <div class="question">
+            <p>15. Saya BELUM pernah ikut pelatihan K3 di tempat kerja*</p>
+            <div class="options">
+                <input type="radio" name="q15" value="0"> 0 - Sudah pernah (0 poin)<br>
+                <input type="radio" name="q15" value="1"> 1 - Sudah lama sekali (1 poin)<br>
+                <input type="radio" name="q15" value="2"> 2 - >1 tahun lalu (2 poin)<br>
+                <input type="radio" name="q15" value="3"> 3 - Tidak pernah (3 poin)
+            </div>
+        </div>
+
+        <button type="button" onclick="calculateScore()">Hitung Skor</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateScore() {
+            let total = 0;
+            for (let i = 1; i <= 15; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selected) {
+                    total += parseInt(selected.value);
+                }
+            }
+            let feedback = "";
+            if (total <= 15) {
+                feedback = "RISIKO RENDAH - Pertahankan prosedur K3";
+            } else if (total <= 30) {
+                feedback = "RISIKO SEDANG - Periksa APD & ergonomi kerja";
+            } else {
+                feedback = "RISIKO TINGGI - Konsultasi Panitia K3 segera";
+            }
+            document.getElementById("result").innerHTML = `Total Skor: ${total}/45<br>${feedback}`;
+        }
+    </script>
+</body>
+</html>
